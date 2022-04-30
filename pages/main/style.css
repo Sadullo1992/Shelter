@@ -154,3 +154,150 @@ a.btn{
     background-color: var(--primary-color-light);
     cursor: pointer;
 }
+
+/* Main blocks */
+/* About section */
+.about {
+    padding: 80px 0 100px;
+}
+.about-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+.about-content {
+    width: 430px;
+}
+.section-title {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+.about-text {
+    line-height: 1.6;
+    color: #4c4c4c;
+}
+p.about-text:not(:last-child) {
+    margin: 25px 0;
+}
+
+/* Our friends */
+.ourfriends {
+    padding: 80px 0 100px;
+    background-color: #f6f6f6;
+}
+.ourfriends-inner {
+    text-align: center;
+}
+.ourfriends-slider {
+    margin: 60px 0;
+    position: relative;
+}
+.ourfriends-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.ourfriends-slider-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+}
+.ourfriends-card {
+    width: 270px;
+    height: 430px;
+    background-color: #fafafa;
+    border-radius: 9px;
+    transition: all 0.2s linear;
+}
+.ourfriends-card:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+.ourfriends-card:hover .btn--outline {
+    background-color: var(--primary-color-light);
+    border: 2px solid var(--primary-color-light);
+    cursor: pointer;
+}
+.ourfriends-pet-name {
+    margin: 30px 0;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+/* Help */
+.help-inner {
+    padding: 80px 0 100px;
+    text-align: center;
+}
+.help-container {
+    margin-top: 59px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 120px;
+    row-gap: 55px;
+}
+.help-item img {
+    margin-bottom: 29px;
+}
+.help-item p {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: #545454;
+    white-space: nowrap;
+}
+
+/* In addition section */
+.inaddition {
+    padding: 80px 0 100px;
+    background-color: #f6f6f6;
+}
+.inaddition-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.inaddition-content {
+    width: 380px;
+}
+.inaddition-bank-title {
+    margin: 20px 0;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.1;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+.inaddition-credit-card {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    align-items: center;
+}
+.inaddition-credit-card > span {
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+.inaddition-bank-text {
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #b2b2b2;
+}
