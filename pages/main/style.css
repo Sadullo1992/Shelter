@@ -1,0 +1,27 @@
+:root {
+    --primary-color: #F1CDB3;
+    --primary-color-light: #FDDCC4;
+}
+@font-face {
+    font-family: Arial, sans-serif;
+    src: url("../../assets/fonts/arial.ttf");    
+}
+@font-face {
+    font-family: Georgia, serif;
+    src: url('../../assets/fonts/Georgia.ttf');   
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
