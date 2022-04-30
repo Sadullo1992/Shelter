@@ -301,3 +301,43 @@ p.about-text:not(:last-child) {
     line-height: 1.5;
     color: #b2b2b2;
 }
+
+/* Footer */
+footer {
+    padding-top: 40px;
+    background-image: url("../../assets/images/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+}
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-contact {
+    width: 279px;
+}
+.footer-address {
+    width: 302px;
+}
+footer .section-title {
+    color: #fff;
+}
+.footer-item {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items: center;
+    grid-gap: 20px;
+}
+.footer-item > a {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.06em;
+    color: var(--primary-color);
+    text-decoration: none; 
+}
+.footer-contact .footer-item:first-of-type {
+    margin: 40px 0;
+}
+.footer-address .footer-item:first-of-type {
+    margin: 34px 0 32px;
+}
