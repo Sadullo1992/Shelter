@@ -71,13 +71,13 @@ header {
     text-decoration: none;
 }
 .nav-link:not(:first-child) {
-    margin-left: 35px;
+    margin-left: 32px;
 }
 .nav-link:not(:first-child):hover {
     color: #fafafa;    
 }
 .nav-link.active {
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     color: #fafafa;
     border-bottom: 3px solid var(--primary-color); 
 }
@@ -111,6 +111,7 @@ header {
     transition: all 0.2s linear;
 }
 a.btn{
+   display: inline-block;
    text-decoration: none;
    font-size: 17px;
    font-family: Georgia, serif;
@@ -144,7 +145,6 @@ a.btn{
     cursor: pointer;
 }
 .btn--bank {
-    display: inline-block;
     padding: 10px 15px;
     background-color: var(--primary-color); 
     border-radius: 9px;
@@ -194,7 +194,7 @@ p.about-text:not(:last-child) {
     text-align: center;
 }
 .ourfriends-slider {
-    margin: 60px 0;
+    margin: 60px 0 66px;
     position: relative;
 }
 .ourfriends-nav {
@@ -227,7 +227,7 @@ p.about-text:not(:last-child) {
     cursor: pointer;
 }
 .ourfriends-pet-name {
-    margin: 30px 0;
+    margin: 25px 0 32px;
     font-family: Georgia, serif;
     font-size: 20px;
     line-height: 23px;
@@ -237,11 +237,11 @@ p.about-text:not(:last-child) {
 
 /* Help */
 .help-inner {
-    padding: 80px 0 100px;
+    padding: 80px 0 103px;
     text-align: center;
 }
 .help-container {
-    margin-top: 59px;
+    margin-top: 56px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -313,9 +313,11 @@ footer {
 }
 .footer-contact {
     width: 279px;
+    padding-top: 17px;
 }
 .footer-address {
     width: 302px;
+    padding-top: 17px;
 }
 footer .section-title {
     color: #fff;
