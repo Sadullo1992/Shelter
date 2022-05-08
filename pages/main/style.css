@@ -141,9 +141,11 @@ a.btn{
     border: 2px solid var(--primary-color);
 }
 .btn--nav.inactive {
-    color: #cdcdcd;
     border: 2px solid #cdcdcd;
     pointer-events: none;
+}
+.btn--nav.inactive p {
+    color: #cdcdcd;
 }
 .btn--outline:hover,
 .btn--nav:hover,
