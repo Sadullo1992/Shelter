@@ -154,6 +154,9 @@ a.btn{
     border: 2px solid var(--primary-color-light);
     cursor: pointer;
 }
+.btn--nav.active:hover {
+    border: 2px solid var(--primary-color);
+}
 .btn--bank {
     padding: 10px 15px;
     background-color: var(--primary-color); 
