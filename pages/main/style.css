@@ -219,9 +219,11 @@ p.about-text:not(:last-child) {
     width: 100%;
 }
 .ourfriends-slider-wrapper {
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
     gap: 90px;
+    width: 990px;
+    overflow: hidden;
 }
 .ourfriends-card {
     width: 270px;
@@ -355,4 +357,287 @@ footer .section-title {
 }
 .footer-address .footer-item:first-of-type {
     margin: 34px 0 32px;
+}
+
+/* Burger */
+.burger-container {
+    display: none;
+}
+
+/* Media query */
+@media (max-width: 1279px){
+    .container {
+        padding: 0 30px;
+        width: 100%;
+        min-width: 768px;
+    }    
+    .main-start-screen {
+        padding-top: 30px;
+    }
+    /* Not only block */
+    .notonly {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        gap: 100px;
+    }
+    .notonly-content {
+        margin-top: 0;
+    }
+    .notonly > img {
+        height: 593px;
+        width: 569px;
+        align-self: flex-end;        
+    }
+    .notonly-content > a.btn {
+        display: block;
+        margin: 0 auto;
+        width: 210px;
+    }
+    /* About section */
+    .about-inner {
+        flex-direction: column-reverse;
+        gap: 80px;
+    }
+    /* Our friends */
+    .ourfriends-slider-wrapper {
+        width: 580px;
+        gap: 40px;
+    }
+    /* Help */
+    .help-container {
+        column-gap: 47px;
+    }
+    .help-item {
+        width: 26%;
+    }
+    /* In addition section */
+    .inaddition-inner {
+        flex-direction: column-reverse;
+        gap: 60px;
+    }
+    /* Footer */
+    footer {
+        padding-top: 30px;
+    }
+    .footer-inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 65px 60px;
+    }
+    .footer-contact,
+    .footer-address {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 767px){
+    .container {
+        padding: 0 10px;
+        min-width: 320px;
+    }
+    /* Header */
+    nav {
+        display: none;
+    }
+    nav.nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: 320px;
+        padding: 70px 10px 248px;
+        background-color: var(--dark-color);
+        position: absolute;
+        right: 0;
+        top: 120px;
+        z-index: 10;
+    }
+    nav.nav.white-back {
+        background-color: #fff;
+    }
+    .nav-link {
+        font-size: 32px;
+        text-align: center;
+    }    
+    .nav-link:not(:first-child) {
+        margin-left: 0;
+    }
+    .burger-container {
+        display: block;
+    }
+    .burger-container > .logo {
+        display: none;
+    }
+    .dark-layer {
+        display: none;
+    }
+    .burger-container > .burger {
+        margin-right: 43px;
+        align-self: center;  
+        transition: transform 0.2s linear;      
+    }
+    .burger-container.dark {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 10px;
+        width: 320px;
+        background-color: var(--dark-color); 
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 10;
+    }
+    .burger-container.dark.white-back {
+        background-color: #fff;
+    }
+    .dark-layer.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 9;
+       
+    }
+    .burger-container.dark > .logo {
+        display: block;
+    }
+    .burger-container.dark > .burger {
+        transition: transform 0.2s linear;
+        transform: rotate(90deg);      
+    }
+    /* Not only */
+    .notonly-content {
+        width: 100%;
+        text-align: center;
+    }
+    .notonly-title {
+        font-size: 25px;
+    }
+    .notonly {
+        gap: 105px;
+    }
+    .notonly > img {
+        height: 272px;
+        width: 260px;
+               
+    }
+    /* About section */
+    .about {
+        padding: 42px 0;
+    }
+    .about-inner {
+        gap: 42px;
+    }
+    .about-content {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .section-title {
+        font-size: 25px;
+        text-align: center;
+    }
+    .about-text {
+        text-align: justify;
+    }
+    p.about-text:not(:last-child) {
+        margin: 25px 0 22px;
+    }
+    .about img {
+        height: 354px;
+        width: 260px;
+    }
+    /* Our friends */
+    .ourfriends { 
+        padding: 42px 0;
+    }
+    .ourfriends-slider { 
+        margin: 42px 0 114px;
+    }
+    .ourfriends-nav {
+        width: 180px;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 455px);
+        z-index: 1;
+    }
+    .ourfriends-slider-wrapper {
+        width: 300px;
+        padding-left: 15px;
+        gap: 30px;
+    }
+    /* Help */
+    .help-inner {
+        padding: 42px 0;
+    }
+    .help-container {
+        justify-content: space-between;
+        margin-top: 42px;
+        row-gap: 30px;
+        column-gap: 30px;
+    }
+    .help-item {
+        width: 45%;
+    }
+    .help-item img {
+        margin-bottom: 19px;
+        width: 50px;
+    }
+    .help-item p {
+        font-size: 15px;
+    }
+    /* In addition */
+    .inaddition {
+        padding: 42px 0;
+    }
+    .inaddition-inner {
+        gap: 42px;
+    }
+    .inaddition-content {
+        width: 100%;
+        text-align: center;
+    }
+    .inaddition-inner > img{
+        width: 260px;
+    }
+    .inaddition-bank-title {
+        letter-spacing: 0;
+    }
+    .inaddition-credit-card > span {
+        font-size: 15px;
+        line-height: 1.1;
+    }
+    .inaddition-bank-text {
+        text-align: justify;
+        margin: 20px 10px 0;
+    }
+    /* Footer */
+    .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .footer-contact,
+    .footer-address {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer-contact {
+        align-items: center;
+    }
+    .footer-contact .footer-item:first-of-type {
+        margin: 0;
+    }
+    .footer-address .footer-item:first-of-type {
+        margin: 0;
+    }
+    .footer-inner > img {
+        width: 260px;
+    }
+    
+    
 }
