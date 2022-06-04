@@ -220,10 +220,12 @@ p.about-text:not(:last-child) {
 }
 .ourfriends-slider-wrapper {
     margin: 0 auto;
-    display: flex;
-    gap: 90px;
     width: 990px;
     overflow: hidden;
+}
+.ourfriends-slider-wrapper-inner {    
+    display: flex;
+    gap: 90px;
 }
 .ourfriends-card {
     width: 270px;
@@ -401,7 +403,9 @@ footer .section-title {
     }
     /* Our friends */
     .ourfriends-slider-wrapper {
-        width: 580px;
+        width: 580px;        
+    }
+    .ourfriends-slider-wrapper-inner {
         gap: 40px;
     }
     /* Help */
@@ -436,7 +440,7 @@ footer .section-title {
         padding: 0 10px;
         min-width: 320px;
     }
-    /* Header */
+    /* Header */    
     nav {
         display: none;
     }
@@ -446,13 +450,32 @@ footer .section-title {
         align-items: center;
         gap: 40px;
         width: 320px;
+        height: calc(100vh - 120px);
         padding: 70px 10px 248px;
         background-color: var(--dark-color);
         position: absolute;
+        overflow: auto;
         right: 0;
         top: 120px;
         z-index: 10;
+        animation-name: burger-open;
+        animation-duration: 0.3s;
     }
+    nav.nav.nav-close,
+    .burger-container.dark.burger-container-close {
+        animation-name: burger-close;
+        animation-duration: 0.3s;
+        right: -320px;
+    }
+    @keyframes burger-open {
+        from { right: -320px; }
+        to { right: 0;}
+    }
+    @keyframes burger-close {
+        from { right: 0; }
+        to { right: -320px;}
+    }
+    
     nav.nav.white-back {
         background-color: #fff;
     }
@@ -475,7 +498,7 @@ footer .section-title {
     .burger-container > .burger {
         margin-right: 43px;
         align-self: center;  
-        transition: transform 0.2s linear;      
+        transition: transform 0.4s linear;      
     }
     .burger-container.dark {
         display: flex;
@@ -487,6 +510,8 @@ footer .section-title {
         right: 0;
         top: 0;
         z-index: 10;
+        animation-name: burger-open;
+        animation-duration: 0.3s;
     }
     .burger-container.dark.white-back {
         background-color: #fff;
@@ -498,7 +523,7 @@ footer .section-title {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(41, 41, 41, 0.6);
         z-index: 9;
        
     }
@@ -506,7 +531,7 @@ footer .section-title {
         display: block;
     }
     .burger-container.dark > .burger {
-        transition: transform 0.2s linear;
+        transition: transform 0.4s linear;
         transform: rotate(90deg);      
     }
     /* Not only */
@@ -566,9 +591,12 @@ footer .section-title {
     }
     .ourfriends-slider-wrapper {
         width: 300px;
+    }
+    .ourfriends-slider-wrapper-inner {
         padding-left: 15px;
         gap: 30px;
     }
+    
     /* Help */
     .help-inner {
         padding: 42px 0;
