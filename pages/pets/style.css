@@ -35,12 +35,14 @@
 }
 .pets-slider-wrapper {
     margin: 0 auto;
-    height: 900px;
     width: 1200px;
+    overflow: hidden;
+}
+.pets-slider-wrapper-inner {    
+    height: 900px;
     display: flex;
     flex-flow: column wrap;
     gap: 35px 40px;
-    overflow: hidden;
 }
 .pets-slider-nav {
     display: flex;
@@ -68,9 +70,11 @@
     .pets-slider-nav {
         margin-top: 40px;
     }
-    .pets-slider-wrapper {
-        height: 1365px;
+    .pets-slider-wrapper {        
         width: 580px;
+    }
+    .pets-slider-wrapper-inner {
+        height: 1365px;        
         gap: 35px 30px;
     }
 }
@@ -86,7 +90,9 @@
         gap: 10px;
     }
     .pets-slider-wrapper {
-        padding-left: 15px;
         width: 300px;
+    }
+    .pets-slider-wrapper-inner {
+        padding-left: 15px;
     }
 }

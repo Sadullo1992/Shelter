@@ -1,38 +1,8 @@
+import {Burger} from './burger.js';
+import {ourfriendsCard} from './petCard.js';
+
 // Burger
-const burger = document.getElementById('burger');
-const burgerContainer = document.getElementById('burger-container');
-const darkLayer = document.querySelector('.dark-layer');
-const nav = document.getElementById('nav');
-const navLinks = document.querySelectorAll('.nav-link');
-
-burger.addEventListener('click', () => {
-    if(nav.classList.contains('nav')) {
-        closeMobileMenu();
-    } else {
-        openMobileMenu();
-    }
-});
-
-navLinks.forEach(item => item.addEventListener('click', closeMobileMenu));
-darkLayer.addEventListener('click', closeMobileMenu);
-
-function openMobileMenu() {
-    burgerContainer.classList.add('dark');
-    darkLayer.classList.add('active');
-    nav.classList.add('nav');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeMobileMenu() {      
-    nav.classList.add('nav-close');  
-    burgerContainer.classList.add('burger-container-close');  
-    darkLayer.classList.remove('active');
-    document.body.style.overflow = 'visible';
-    setTimeout(() => {
-        nav.classList.remove('nav','nav-close');
-        burgerContainer.classList.remove('dark','burger-container-close');
-    }, 200)
-}
+Burger();
 
 // Carousel
 // Get data from json file
@@ -50,7 +20,7 @@ async function dataPets(){
     }
 }
 
-const ourfriendsSliderWrapper = document.getElementById('ourfriends-slider-wrapper');
+// const ourfriendsSliderWrapper = document.getElementById('ourfriends-slider-wrapper');
 const ourfriendsSliderWrapperInner = document.getElementById('ourfriends-slider-wrapper-inner');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
@@ -82,9 +52,9 @@ async function carouselCantainer(randomArray, direct) {
     let pets = await dataPets();
     randomArray.forEach(item => {
         if(direct === 'next') {
-            ourfriendsSliderWrapperInner.append(ourfriendsCard(pets[item].name, pets[item].img))
+            ourfriendsSliderWrapperInner.append(ourfriendsCard(pets[item]))
         } else {
-            ourfriendsSliderWrapperInner.prepend(ourfriendsCard(pets[item].name, pets[item].img))
+            ourfriendsSliderWrapperInner.prepend(ourfriendsCard(pets[item]))
         }
     });     
 }
@@ -98,8 +68,6 @@ prevBtn.addEventListener('click', () => {
 
 const activeSlides = (direction) => {     
     const randomArray = randomArrFunction(activeArr);
-    console.log('activeArr', activeArr);
-    console.log('randomArr', randomArray);
     carouselCantainer(randomArray, direction);
     transformSlide(activeArr, direction);
     setTimeout(() => {
@@ -144,32 +112,4 @@ const randomArrFunction = (activeArr) => {
         randomArr.push(x);
     }
     return randomArr;
-}
-
-function ourfriendsCard(name, img) {
-    let docFragment = document.createDocumentFragment();
-
-    let card = document.createElement('div');
-    card.classList.add('ourfriends-card');
-
-    let imgCard = document.createElement('img');
-    imgCard.setAttribute('src', img);
-    imgCard.setAttribute('alt', name);
-
-    let pName = document.createElement('p');
-    pName.classList.add('ourfriends-pet-name');
-    pName.textContent = name;
-
-    let moreBtn = document.createElement('a');
-    // moreBtn.setAttribute('href', '');
-    moreBtn.classList.add('btn', 'btn--outline');
-    moreBtn.textContent = 'Learn more';
-
-    card.append(imgCard);
-    card.append(pName);
-    card.append(moreBtn);
-
-    docFragment.append(card);
-
-    return docFragment;
 }
