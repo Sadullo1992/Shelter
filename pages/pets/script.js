@@ -42,19 +42,31 @@ const setActiveSlides = () => {
     if(window.innerWidth < 767) {
         activeArr = [0, 1, 2];
         activeAllPets = activeAllPetsFunc(activeArr);
+        while (petsWrapperInner.firstChild) {
+            petsWrapperInner.removeChild(petsWrapperInner.firstChild);
+        }
+        num = 0;  
+        paginationContainer(activeAllPets);
+        transformPagination(num);  
     } else if(window.innerWidth > 1279) {
         activeArr = [0, 1, 2, 3, 4, 5, 6, 7];
         activeAllPets = activeAllPetsFunc(activeArr);
+        while (petsWrapperInner.firstChild) {
+            petsWrapperInner.removeChild(petsWrapperInner.firstChild);
+        }
+        num = 0;  
+        paginationContainer(activeAllPets);
+        transformPagination(num); 
     } else {
         activeArr = [0, 1, 2, 3, 4, 5]; 
-        activeAllPets = activeAllPetsFunc(activeArr);       
-    }
-    while (petsWrapperInner.firstChild) {
-        petsWrapperInner.removeChild(petsWrapperInner.firstChild);
-    }
-    num = 0;    
-    paginationContainer(activeAllPets);
-    transformPagination(num);  
+        activeAllPets = activeAllPetsFunc(activeArr);   
+        while (petsWrapperInner.firstChild) {
+            petsWrapperInner.removeChild(petsWrapperInner.firstChild);
+        }
+        num = 0;  
+        paginationContainer(activeAllPets);
+        transformPagination(num);     
+    }    
 };
 
 
